@@ -1,22 +1,7 @@
-type Funcao = (x: number) => number;
-
-interface Iteracao {
-  a: number,
-  b: number,
-  'sinal F(a)*f(b)': number,
-  M: number,
-  'sinal F(a)*F(m)': number,
-  'F(M)': number,
-  novoIntervalo: [number, number]
-}
+import { Funcao, Iteracao} from './types';
+import { funcao, precisao } from './valores';
 
 const resultados: Array<Iteracao> = [];
-
-const precisao: number = Math.pow(10, -8);
-
-/* const funcao: Funcao = (x) => Math.pow(x, 2) - 8; */
-
-const funcao: Funcao = (x) => x + Math.log(x);
 
 const calcularModulo = (x: number) => x > 0 ? x : -x;
 
